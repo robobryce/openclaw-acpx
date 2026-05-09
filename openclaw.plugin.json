@@ -42,8 +42,8 @@
       },
       "timeoutSeconds": {
         "type": "number",
-        "minimum": 0.001,
-        "default": 120
+        "minimum": 0,
+        "default": 0
       },
       "queueOwnerTtlSeconds": {
         "type": "number",
@@ -126,7 +126,7 @@
     },
     "timeoutSeconds": {
       "label": "Prompt Timeout Seconds",
-      "help": "Timeout for each embedded runtime turn. Defaults to 120 seconds so slower Gemini CLI ACP startups have room to initialize.",
+      "help": "Timeout for each embedded runtime turn. 0 disables the cap (gateroom fork: required for long-running iterative agents).",
       "advanced": true
     },
     "queueOwnerTtlSeconds": {
